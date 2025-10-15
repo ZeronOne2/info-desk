@@ -1,0 +1,82 @@
+Info-Desk Windows Installation Guide (Final Version)
+====================================================
+
+PACKAGE COMPATIBILITY FIXED!
+
+Quick Start (Recommended):
+1. Extract ALL files from the ZIP to a folder
+2. Double-click install.bat (automatic smart installation)  
+3. Double-click run.bat to start Info-Desk
+
+What's Fixed:
+✅ PyQt5 version compatibility issues resolved
+✅ Multiple installation fallback methods
+✅ Smart package version detection
+✅ Automatic error recovery
+
+Installation Methods (in order of recommendation):
+
+Method 1: Smart Batch Installation (Best)
+1. Double-click install.bat
+2. The script will automatically try multiple installation methods:
+   - Latest compatible versions
+   - Stable versions (5.15.2)
+   - Minimal requirements
+   - Manual installation
+3. Double-click run.bat when complete
+
+Method 2: PowerShell Smart Installation  
+1. Right-click install.ps1 → "Run with PowerShell"
+2. Automatic multi-method installation
+3. Run: python main.py
+
+Method 3: Environment Check & Auto-Fix
+1. Run: python check_environment.py
+2. Automatic environment verification and package installation
+3. Component testing included
+
+Method 4: Manual Installation (If all else fails)
+1. Open Command Prompt in extracted folder
+2. Try in order:
+   pip install -r requirements.txt
+   pip install -r requirements_stable.txt  
+   pip install PyQt5 openpyxl
+3. Run: python main.py
+
+Files Included:
+├── install.bat              # Smart batch installer (multiple methods)
+├── install.ps1              # PowerShell smart installer
+├── run.bat                  # Application launcher
+├── check_environment.py     # Environment checker & auto-fixer
+├── requirements.txt         # Latest compatible versions
+├── requirements_stable.txt  # Stable versions (backup)
+├── requirements_minimal.txt # Minimal requirements (fallback)
+├── main.py                  # Main application
+├── src/                     # Source code
+├── config/                  # Configuration
+└── data/                    # Data storage
+
+Troubleshooting:
+
+Still getting package errors?
+1. Update pip: python -m pip install --upgrade pip
+2. Try stable versions: pip install -r requirements_stable.txt
+3. Install manually: pip install PyQt5==5.15.2 openpyxl==3.1.2
+
+Python not found?
+- Download from https://python.org
+- Check "Add Python to PATH" during installation
+- Restart Command Prompt after installation
+
+Application won't start?
+1. Run check_environment.py for diagnosis
+2. Check if all files were extracted from ZIP
+3. Make sure you're running from the extracted folder
+
+Success Indicators:
+✓ install.bat completes without errors
+✓ "Installation completed successfully!" message appears
+✓ run.bat starts the application window
+✓ check_environment.py shows all green checkmarks
+
+This version should work on any Windows system with Python installed!
