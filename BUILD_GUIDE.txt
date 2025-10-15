@@ -1,0 +1,50 @@
+Info-Desk EXE Builder Guide (Fixed Version)
+===========================================
+
+Multiple build methods available to avoid encoding issues:
+
+Method 1: PowerShell (Recommended)
+==================================
+1. Right-click build_exe.ps1
+2. Select "Run with PowerShell"
+3. Wait for completion
+4. Find Info-Desk.exe in dist folder
+
+Method 2: Python Script
+======================
+1. Double-click build_minimal.bat
+   OR
+   Run: python build_exe.py
+2. Wait for completion
+3. Find Info-Desk.exe in dist folder
+
+Method 3: Batch File
+===================
+1. Double-click build_exe.bat
+2. If encoding errors occur, use Method 1 or 2
+
+Build Process:
+=============
+1. Install packages (PyQt5, openpyxl, pyinstaller)
+2. Clean previous builds
+3. Run PyInstaller
+4. Generate dist/Info-Desk.exe
+
+Result:
+======
+- Standalone EXE file (~50-60 MB)
+- No Python required for end users
+- Single file distribution
+- Works on Windows 10+
+
+Troubleshooting:
+===============
+- Encoding errors: Use PowerShell or Python method
+- Python not found: Install from python.org
+- Build errors: Check error messages
+- Large file size: Normal due to PyQt5
+
+Distribution:
+============
+Just share the Info-Desk.exe file!
+Users can run it without any installation.
