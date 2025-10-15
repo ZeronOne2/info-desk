@@ -1,0 +1,50 @@
+Info-Desk EXE 빌더 가이드 (수정 버전)
+=====================================
+
+인코딩 문제를 피하기 위한 여러 빌드 방법:
+
+방법 1: PowerShell (권장)
+========================
+1. build_exe.ps1 우클릭
+2. "PowerShell에서 실행" 선택
+3. 완료까지 대기
+4. dist 폴더에서 Info-Desk.exe 확인
+
+방법 2: Python 스크립트
+======================
+1. build_minimal.bat 더블클릭
+   또는
+   python build_exe.py 실행
+2. 완료까지 대기
+3. dist 폴더에서 Info-Desk.exe 확인
+
+방법 3: 배치 파일
+================
+1. build_exe.bat 더블클릭
+2. 인코딩 오류 발생 시 방법 1 또는 2 사용
+
+빌드 과정:
+=========
+1. 패키지 설치 (PyQt5, openpyxl, pyinstaller)
+2. 이전 빌드 정리
+3. PyInstaller 실행
+4. dist/Info-Desk.exe 생성
+
+결과물:
+======
+- 독립 실행 EXE 파일 (~50-60 MB)
+- 사용자는 Python 불필요
+- 단일 파일 배포
+- Windows 10 이상 실행
+
+문제 해결:
+=========
+- 인코딩 오류: PowerShell 또는 Python 방법 사용
+- Python 없음: python.org에서 설치
+- 빌드 오류: 오류 메시지 확인
+- 파일 크기 큼: PyQt5 때문에 정상
+
+배포:
+====
+Info-Desk.exe 파일만 공유하면 됩니다!
+사용자는 설치 없이 바로 실행 가능합니다.
